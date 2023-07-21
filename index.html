@@ -1,135 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+        /* Add the black and green theme */
+        html,
+        body {
+            background: black;
+            color: #0F0;
+            font-family: 'Raleway', sans-serif;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-<title> Brandon's Website </title>
-
-<style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
-
-  /* Hide the carousel text when the screen is less than 600 pixels wide */
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none;
-    }
-  }
-
-	</style>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-
-
+        /* Center the title vertically and horizontally */
+        #title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-size: 36px;
+        }
+    </style>
+    <title>Brandon's Cybersecurity Website</title>
 </head>
+
 <body>
-<div class="container-fluid">
-<nav class="navbar navbar-default">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-nav-demo">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">Brandon's Website</a>
+            </div>
 
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-<a href="index.html" class="navbar-brand"> Brandon's Website </a>
-</div>
-
-<div class="collapse navbar-collapse" id="bs-nav-demo">
-<ul class="nav navbar-nav">
-  <li> <a target="_blank" href="https://github.com/Brand0nS"> <i class="fab fa-github"></i> Github </a></li>
-  <li> <a href="resume.html"> <i class="fas fa-file"></i> Resume 	</a></li>
-  <li> <a href="mailto:brandonscottwork12@gmail.com"> <i class="fas fa-envelope-open"></i> Contact Me </a></li>
-</ul>
-
-</div>
-
-
-<!--Where the Carousel starts -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-	  <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="images/nafinia-putra-68859-unsplash.jpg" alt="Image">
-        <div class="carousel-caption">
-          <h3>A recent graduate </h3>
-          <p>An aspiring developer </p>
+            <div class="collapse navbar-collapse" id="bs-nav-demo">
+                <ul class="nav navbar-nav">
+                    <li><a target="_blank" href="https://github.com/Brand0nS"><i class="fab fa-github"></i>
+                            Github</a></li>
+                    <li><a href="resume.html"><i class="fas fa-file"></i> Resume </a></li>
+                    <li><a href="mailto:brandonscottwork12@gmail.com"><i class="fas fa-envelope-open"></i> Contact
+                            Me</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <div class="item">
-        <img src= "images/ilya-pavlov-87438.jpg" alt="text=Image2">
-        <div class="carousel-caption">
-          <h3> My Bio is a nice one! </h3>
-          <p> Welcome to my website! </p>
-        </div>
-      </div>
+    <div id="title">Brandon's <span id="typing-animation"></span> Website</div>
+    <canvas id="Matrix"></canvas>
+    <script>
+        // Digital rain animation starts when the page loads
+        window.addEventListener('load', () => {
+            const canvas = document.getElementById('Matrix');
+            const context = canvas.getContext('2d');
 
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
 
-	<div class="item">
-        <img src= "images/artem-sapegin-176819-unsplash.jpg" alt="Image3">
-        <div class="carousel-caption">
-          <h3> Creating Solutions </h3>
-          <p> Welcome to my website! </p>
-        </div>
-      </div>
-    </div>
+            const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+            const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const nums = '0123456789';
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-</br>
+            const alphabet = katakana + latin + nums;
 
-<!-- Jumbotron -->
+            const fontSize = 16;
+            const columns = canvas.width / fontSize;
 
-<div class="jumbotron">
-    <h1>Bio </h1>
-    <p>My name is Brandon Scott.
-      I am 20 yrs old and a recent graduate from the City College of Technology.
-      I am currently enrolled @ Queens College. I like to play/make video games. I also like to play my guitar and make videos.
-     For the longest time, I have been interested in technology. I really started taking
-     an interest when I built my first computer a few years ago. When I first started building,
-      it was an exhilarating experience. I thought that I would be lucky to be working with computers in
-      the future. </p>
+            const rainDrops = [];
 
-<p>In the future, I see myself either working with new technologies as a programmer/web developer...
-   or programming video games..</p>
-  </div>
+            for (let x = 0; x < columns; x++) {
+                rainDrops[x] = 1;
+            }
 
+            const draw = () => {
+                context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                context.fillStyle = '#0F0';
+                context.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < rainDrops.length; i++) {
+                    const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                    context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                    if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        rainDrops[i] = 0;
+                    }
+                    rainDrops[i]++;
+                }
+            };
+
+            const animationInterval = setInterval(draw, 30);
+
+            // Stop the digital rain animation after a few seconds (adjust the duration as needed)
+            setTimeout(() => {
+                clearInterval(animationInterval);
+            }, 3000);
+        });
+
+        // Typing animation for "Brandon's Cybersecurity Website"
+        const titleText = "Brandon's Cybersecurity Website";
+        const typingElement = document.getElementById('typing-animation');
+
+        const typeText = (text, i = 0) => {
+            if (i < text.length) {
+                typingElement.innerHTML += text.charAt(i);
+                setTimeout(() => typeText(text, i + 1), 100); // Adjust typing speed here (milliseconds)
+            }
+        };
+
+        typeText(titleText);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
