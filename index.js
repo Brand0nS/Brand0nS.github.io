@@ -44,8 +44,20 @@ window.addEventListener('load', () => {
             const animationInterval = setInterval(draw, 30);
 
             // Stop the digital rain animation after a few seconds (adjust the duration as needed)
-            setTimeout(() => {
-                clearInterval(animationInterval);
-            }, 3000);
+          //  setTimeout(() => {
+            //    clearInterval(animationInterval);
+            //}, 3000);
 });
 
+// Typing animation for "Brandon's Cybersecurity Website"
+const titleText = "Brandon's Cybersecurity Website";
+const typingElement = document.getElementById('typing-animation');
+
+const typeText = (text, i = 0) => {
+    if (i < text.length) {
+        typingElement.innerHTML += text.charAt(i);
+        setTimeout(() => typeText(text, i + 1), 100); // Adjust typing speed here (milliseconds)
+    }
+};  
+
+typeText(titleText);
