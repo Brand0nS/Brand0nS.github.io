@@ -19,6 +19,13 @@ body {
   font-size: 36px;
 }
 
+/* Adjust the rain animation canvas */
+#Matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
 /* Position the rain canvas container */
 .rain-container {
   position: fixed;
