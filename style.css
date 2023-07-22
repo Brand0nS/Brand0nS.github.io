@@ -1,64 +1,21 @@
-body{
-font-family: 'Raleway', sans-serif;
-height: 100%
-
+/* Add the black and green theme */
+html,
+body {
+    background: black;
+    color: #0F0;
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
- html {
-  height: 100%;
+/* Center the title vertically and horizontally */
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 36px;
 }
 
-.content {
-
-padding-top: -1000px;
-
-
-}
-
-.content hr {
-    width: 100%;
-    margin-left: -500%;
-}
-
-
-.underline {
-text-decoration: underline;
-
-}
-
-.content2{
-align-content: center;
-
-}
-
-.inline {
-padding-right: 250px;
-
-}
-
-.child-right{
-float: right;
-  white-space: nowrap;
-  padding-top:-10px;
-}
-
-ul{
-padding-bottom: 10px;
-
-}
-
-hr {
-color: solid black 1px;
-background-color: solid black 1px;
-
-}
-
-.height-full {
-  height: 100vh;
-}
-
-a{
-text-decoration: none;
-color: black;
-
-}
