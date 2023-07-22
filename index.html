@@ -37,6 +37,24 @@
         <div id="title"> <span id="typing-animation"></span> </div>
     </div>
     <canvas id="Matrix"></canvas>
+
+    <script>
+        const titleText = "Brandon's Cybersecurity Website";
+        const typingElement = document.getElementById('typing-animation');
+    
+        const typeText = (text, i = 0) => {
+            if (i < text.length) {
+                typingElement.innerHTML += text.charAt(i);
+                setTimeout(() => typeText(text, i + 1), 100); // Adjust typing speed here (milliseconds)
+            }
+        };
+    
+        // Start the typing animation once the page is fully loaded
+        window.addEventListener('load', () => {
+            typeText(titleText);
+        });
+    </script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="./index.js"></script>
