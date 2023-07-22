@@ -7,7 +7,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
- 
+  background: transparent;
 }
 
 /* Make the rain container full size of the screen */
@@ -17,7 +17,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Send the rain container to the background */
+  z-index: -2; /* Send the rain container to the background */
 }
 
 /* Additional styling for the typing animation */
@@ -27,6 +27,7 @@ body {
   justify-content: center;
   height: 100vh;
   font-size: 36px;
+  background: transparent; /* Make the background of the title transparent */
 }
 
 /* Make the Matrix canvas full screen */
@@ -36,5 +37,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -2; /* Send the Matrix canvas behind the rain container */
+  z-index: -1; /* Send the Matrix canvas behind the rain container */
 }
+
+.content2 {
+    padding: 20px;
+    background: black; /* Set the background of the resume page to black */
+  }
