@@ -44,3 +44,13 @@ body {
     padding: 20px;
     background: black; /* Set the background of the resume page to black */
   }
+
+  #video{
+    padding: 20px;
+    background: black; 
+
+  }
+
+  .video-container {
+    background-color: black;
+  }
