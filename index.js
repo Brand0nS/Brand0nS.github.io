@@ -49,8 +49,8 @@ window.addEventListener('load', () => {
   // }, 3000);
 });
 
-// Typing animation for "Brandon's Cybersecurity Website"
-const titleText = "Brandon's Cybersecurity Website";
+// Typing animation for "Brandon's Website"
+const titleText = "Welcome to Brandon's Website";
 const typingElement = document.getElementById('typing-animation');
 
 const typeText = (text, i = 0) => {
